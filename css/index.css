@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand");
+
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	font-family: "Quicksand", sans-serif;
+}
+
+:root {
+	--grey: hsl(215, 27.9%, 16.9%);
+	--white: rgb(255, 255, 255);
+	--green: hsl(142, 76.2%, 36.3%);
+	--lightgrey: hsl(220, 14.3%, 95.9%);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--grey);
+	color: var(--white);
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 16px;
+	margin-bottom: 42px;
+}
+
+header h1 {
+	font-size: 1.8em;
+}
+
+.two-matrix {
+	max-width: 500px;
+	width: 80%;
+	margin-inline: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.two-matrix .det {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.two-matrix .det div {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-gap: 20px;
+}
+
+.two-matrix .det div.hide,
+.two-matrix .det div.result.hide {
+	display: none;
+}
+
+.two-matrix .det div.result {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	background: var(--white);
+	border-radius: 4px;
+}
+
+.two-matrix .det div.result p {
+	color: var(--grey);
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.two-matrix .det div input {
+	display: block;
+	text-align: center;
+	height: 48px;
+	width: 48px;
+	font-size: 20px;
+	background: var(--lightgrey);
+	padding: 8px;
+	caret-color: var(--green);
+	color: #000;
+	border-radius: 4px;
+}
+
+.two-matrix .det button {
+	background: var(--green);
+	color: var(--white);
+	display: block;
+	padding: 8px 20px;
+	font-size: 16px;
+	border-radius: 4px;
+}
+
+.two-matrix .oper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.two-matrix .oper .do-oper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.two-matrix .oper .do-oper-left,
+.two-matrix .oper .do-oper-right {
+	border-inline: 3px solid var(--white);
+	padding-inline: 20px;
+}
+
+.two-matrix .oper div {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-gap: 20px;
+}
+
+.two-matrix .oper div.hide,
+.two-matrix .oper div.result.hide {
+	display: none;
+}
+
+.two-matrix .oper div.result {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	background: var(--white);
+	border-radius: 4px;
+}
+
+.two-matrix .oper div.result p {
+	color: var(--grey);
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.two-matrix .oper div input {
+	display: block;
+	text-align: center;
+	height: 48px;
+	width: 48px;
+	font-size: 20px;
+	background: var(--lightgrey);
+	padding: 8px;
+	caret-color: var(--green);
+	color: #000;
+	border-radius: 4px;
+}
+
+.two-matrix .oper .buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	align-items: center;
+	gap: 12px;
+}
+
+.two-matrix .oper button {
+	background: var(--green);
+	color: var(--white);
+	display: block;
+	padding: 8px 20px;
+	font-size: 16px;
+	border-radius: 4px;
+}
