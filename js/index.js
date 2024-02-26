@@ -52,7 +52,7 @@ twoOperBtn.addEventListener("click", e => {
 		var n = b + f;
 		var o = c + g;
 		var p = d + h;
-		console.log(n);
+		console.log(g);
 	} else if (e.target.classList.contains("subtract")) {
 		var det = b;
 		console.log(det);
