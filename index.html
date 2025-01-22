@@ -1,61 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<meta
-			http-equiv="X-UA-Compatible"
-			content="ie=edge"
-		/>
-		<link
-			rel="stylesheet"
-			href="./css/index.css"
-		/>
-		<title>Matrices</title>
-	</head>
-	<body>
-		<section class="subsection-one">
-			<section class="subsection-two">
-				<header>
-					<h1>Matrices</h1>
-					<a
-						href="https://habibadebayo.vercel.app/"
-						>Created by Habib</a
-					>
-				</header>
-				<main>
-					<section class="two-matrix">
-						<div class="determinant">
-<strong>2×2 Matrix</strong>
-							<div>
-								<input
-									type="text"
-									placeholder="a"
-								/>
-								<input
-									type="text"
-									placeholder="b"
-								/>
-								<input
-									type="text"
-									placeholder="c"
-								/>
-								<input
-									type="text"
-									placeholder="d"
-								/>
-							</div>
-							<button
-								>Get Determinant</button
-							>
-						</div>
-					</section>
-				</main>
-				<script src="./js/index.js"></script>
-			</section>
-		</section>
-	</body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrix Calculator</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <header>
+    <h1>Matrix Calculator</h1>
+  </header>
+  <main>
+    <form id="matrix-selection">
+      <label for="matrix-size">Select Matrix Size:</label>
+      <select id="matrix-size" name="matrix-size" required>
+        <option value="2">2x2</option>
+        <option value="3">3x3</option>
+        <option value="4">4x4</option>
+        <option value="5">5x5</option>
+      </select>
+      <label for="operation">Select Operation:</label>
+      <select id="operation" name="operation" required>
+        <option value="add">Addition</option>
+        <option value="subtract">Subtraction</option>
+        <option value="multiply">Multiplication</option>
+        <option value="determinant">Determinant</option>
+        <option value="transpose">Transpose</option>
+        <option value="adjoint">Adjoint</option>
+      </select>
+      <button type="submit">Proceed</button>
+    </form>
+  </main>
+  <script src="./js/index.js"></script>
+</body>
 </html>

@@ -1,110 +1,56 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono");
-
-* {
-	padding: 0;
-	margin: 0;
-	border: none;
-	outline: none;
-	box-sizing: border-box;
-	list-style: none;
-	text-decoration: none;
-	font-family: "Space Mono", monospace;
-}
-
-:root {
-	--grey: hsl(215, 27.9%, 16.9%);
-	--white: rgb(255, 255, 255);
-	--green: hsl(142, 76.2%, 36.3%);
-	--lightgrey: hsl(220, 14.3%, 95.9%);
-}
-
 body {
-	background: var(--grey);
-	color: #fff;
-}
-
-.subsection-one {
-	display: grid;
-	grid-template-columns: repeat(
-		12,
-		1fr
-	);
-	padding: 16px 20px;
-}
-
-.subsection-two {
-	grid-column-start: 1;
-	grid-column-end: 13;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  color: #333;
 }
 
 header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-direction: row;
-	gap: 24px;
+  text-align: center;
+  background-color: #4caf50;
+  color: white;
+  padding: 20px 0;
 }
 
-header h1 {
-	font-size: 1.5em;
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header a {
-	background: var(--green);
-	color: var(--white);
-	padding: 10px;
-	border-radius: 5px;
-	font-size: 1em;
-	text-align: center;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.two-matrix {
-	padding-block: 60px 30px;
+select, button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.two-matrix .determinant {
-	display: flex;
-	justify-content: start;
-	align-items: center;
-	flex-direction: column;
-	gap: 24px;
+button {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
 }
 
-.two-matrix .determinant strong {
-	font-size: 1.2em;
-	text-align: center;
+button:hover {
+  background-color: #45a049;
 }
 
-.two-matrix .determinant div {
-	display: grid;
-	grid-template-columns: 48px 48px;
-	grid-gap: 24px;
-	place-items: center;
+#matrix-inputs {
+  display: grid;
+  gap: 10px;
 }
 
-.two-matrix .determinant div input {
-	width: 48px;
-	height: 48px;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.2em;
-	border-radius: 4px;
-}
-
-.two-matrix .determinant button {
-	background: var(--green);
-	color: var(--white);
-	padding: 10px;
-	border-radius: 5px;
-	font-size: 1em;
-	text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-	.subsection-two {
-		grid-column-start: 2;
-		grid-column-end: 12;
-	}
+.matrix-row {
+  display: flex;
+  gap: 10px;
 }
