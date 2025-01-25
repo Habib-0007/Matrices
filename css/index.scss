@@ -1,0 +1,161 @@
+$primary-color: #3498db;
+$background-color: #f4f4f4;
+$text-color: #333;
+
+$grey: hsl(215, 27.9%, 16.9%);
+$white: rgb(255, 255, 255);
+$green: hsl(142, 76.2%, 36.3%);
+$green-deeper: hsl(142, 80%, 20%);
+$lightgrey: hsl(220, 14.3%, 95.9%);
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: $grey;
+	color: $white;
+	padding: 20px;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 20px;
+	color: $green;
+	font-size: 24px;
+}
+
+.size-selector {
+	margin-bottom: 20px;
+
+	label {
+		margin-right: 10px;
+	}
+
+	select {
+		padding: 5px;
+		font-size: 16px;
+	}
+}
+
+.matrix-inputs {
+	display: flex;
+	justify-content: start;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 12px;
+	margin-block: 20px;
+
+	@media screen and (min-width: 900px) {
+		justify-content: space-between;
+		flex-direction: row;
+	}
+
+	.matrix {
+		h2 {
+			margin-bottom: 10px;
+		}
+
+		#matrix-a,
+		#matrix-b {
+			display: grid;
+			place-content: center;
+			gap: 10px;
+		}
+
+		input {
+			width: 48px;
+			height: 48px;
+			padding: 5px;
+			text-align: center;
+			font-size: 18px;
+			color: $grey;
+			border-radius: 4px;
+			border: 2px solid $white;
+			background: $white;
+			transition: border-color ease
+				400ms;
+			&:hover {
+				border-color: $green;
+			}
+			&:focus {
+				border-color: $green;
+			}
+		}
+	}
+}
+
+.operations {
+	margin-bottom: 20px;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 16px;
+	max-width: 480px;
+	margin: 0 auto;
+
+	button {
+		padding: 14px 20px;
+		font-size: 16px;
+		background-color: $green;
+		color: white;
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.3s;
+		border-radius: 4px;
+
+		&:hover {
+			background-color: $green-deeper;
+		}
+	}
+}
+
+.result {
+	margin-block: 20px;
+	h2 {
+		margin-bottom: 10px;
+		font-size: 18px;
+	}
+
+	#result-matrix {
+		display: inline-block;
+		padding: 10px;
+		background-color: $lightgrey;
+		border: 1px solid $green-deeper;
+		color: $green-deeper;
+		border-radius: 5px;
+		margin-top: 10px;
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+
+			td {
+				padding: 16px;
+				text-align: center;
+				border: 2px solid $green-deeper;
+				color: $green;
+			}
+		}
+
+		.result-value {
+			font-size: 18px;
+			font-weight: bold;
+			color: $green;
+		}
+	}
+}

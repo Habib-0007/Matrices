@@ -1,36 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matrix Calculator</title>
-  <link rel="stylesheet" href="./css/index.css">
-</head>
-<body>
-  <header>
-    <h1>Matrix Calculator</h1>
-  </header>
-  <main>
-    <form id="matrix-selection">
-      <label for="matrix-size">Select Matrix Size:</label>
-      <select id="matrix-size" name="matrix-size" required>
-        <option value="2">2x2</option>
-        <option value="3">3x3</option>
-        <option value="4">4x4</option>
-        <option value="5">5x5</option>
-      </select>
-      <label for="operation">Select Operation:</label>
-      <select id="operation" name="operation" required>
-        <option value="add">Addition</option>
-        <option value="subtract">Subtraction</option>
-        <option value="multiply">Multiplication</option>
-        <option value="determinant">Determinant</option>
-        <option value="transpose">Transpose</option>
-        <option value="adjoint">Adjoint</option>
-      </select>
-      <button type="submit">Proceed</button>
-    </form>
-  </main>
-  <script src="./js/index.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Matrix Calculator</title>
+		<link
+			rel="stylesheet"
+			href="css/index.css"
+		/>
+	</head>
+	<body>
+		<section class="container">
+			<h1>Matrix Calculator</h1>
+			<section class="size-selector">
+				<label for="matrix-size"
+					>Select Matrix Size:</label
+				>
+				<select id="matrix-size">
+					<option value="2">2x2</option>
+					<option value="3">3x3</option>
+					<option value="4">4x4</option>
+					<option value="5">5x5</option>
+				</select>
+			</section>
+			<section class="matrix-inputs">
+				<section class="matrix">
+					<h2>Matrix A</h2>
+					<div id="matrix-a"></div>
+				</section>
+				<section class="matrix">
+					<h2>Matrix B</h2>
+					<div id="matrix-b"></div>
+				</section>
+			</section>
+
+			<section class="operations">
+				<button id="add"
+					>Add (A + B)</button
+				>
+				<button id="subtract"
+					>Subtract (A - B)</button
+				>
+				<button id="multiply"
+					>Multiply (A * B)</button
+				>
+				<button id="determinant-a"
+					>Determinant of A</button
+				>
+				<button id="determinant-b"
+					>Determinant of B</button
+				>
+				<button id="transpose-a"
+					>Transpose of A</button
+				>
+				<button id="transpose-b"
+					>Transpose of B</button
+				>
+				<button id="adjoint-a"
+					>Adjoint of A</button
+				>
+				<button id="adjoint-b"
+					>Adjoint of B</button
+				>
+			</section>
+			<section class="result">
+				<h2>Result:</h2>
+				<div id="result-matrix">
+					Empty
+				</div>
+			</section>
+		</section>
+
+		<script src="js/index.js"></script>
+	</body>
 </html>
